@@ -13,7 +13,8 @@ cd $MAIN_DIR
 [ ! -d "$ARCH_DIR_NAME" ] && mkdir $ARCH_DIR_NAME
 
 # Stopping all containers and wait for completion.
-docker compose -f $MAIN_DIR/docker-compose.yml stop & wait
+docker compose -f $MAIN_DIR/docker-compose.yml stop &
+wait $!
 
 # Create a compressed archive with the data from the data directory
 tar -czf $MAIN_DIR/$ARCH_DIR_NAME/$CURR_DATE.tar.gz ./data/*

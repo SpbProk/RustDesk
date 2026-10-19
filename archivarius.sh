@@ -12,6 +12,7 @@ cd $MAIN_DIR
 # Сheck whether the ARCH_DIR_NAME directory exists
 [ ! -d "$ARCH_DIR_NAME" ] && mkdir $ARCH_DIR_NAME
 
+
 # Stopping all containers and wait for completion.
 docker compose -f $MAIN_DIR/docker-compose.yml stop &
 wait $!

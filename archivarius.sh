@@ -5,7 +5,6 @@ ARCH_DIR_NAME="archived_data"
 CURR_DATE=$(/bin/sh -c "date +%H-%M-%S_%d-%m-%Y")
 
 
-
 #Move to the main directory
 cd $MAIN_DIR
 
